@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Shaadi.com Assignment</string>
+    <string name="decline">Decline</string>
+    <string name="accept">Accept</string>
+    <string name="accept_msg">Match Accepted</string>
+    <string name="decline_msg">Match Declined</string>
+
+</resources>

@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_height="wrap_content"
+    android:layout_width="match_parent"
+    android:elevation="@dimen/spacing_xxxs"
+    android:layout_margin="@dimen/spacing_5dp"
+    android:background="@color/white"
+    app:cardCornerRadius="@dimen/spacing_5dp"
+    >
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/spacing_xxs"
+        >
+
+        <ImageView
+            android:id="@+id/ivProfilePic"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/profile_pic_size"
+            android:src="@drawable/logo"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/spacing_m"
+            android:textColor="@color/blue"
+            android:text="Garima R"
+            android:textSize="@dimen/text_size_l"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ivProfilePic" />
+
+        <TextView
+            android:id="@+id/tvAge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/spacing_m"
+            android:text="27, Female"
+            android:textSize="@dimen/text_size_m"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvName" />
+
+        <TextView
+            android:id="@+id/tvAddress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/spacing_5dp"
+            android:text="Ludhiana, India, Masters"
+            android:textSize="@dimen/text_size_m"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvAge"
+            />
+
+        <ImageButton
+            android:id="@+id/btnDecline"
+            android:src="@drawable/ic_close"
+            android:background="@drawable/rounded_corner_gray"
+            android:layout_width="@dimen/image_btn_size"
+            android:layout_height="@dimen/image_btn_size"
+            android:layout_marginTop="@dimen/spacing_s"
+            app:layout_constraintEnd_toStartOf="@+id/btnAccept"
+            app:layout_constraintHorizontal_chainStyle="spread"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvAddress"
+            />
+
+        <ImageButton
+            android:id="@+id/btnAccept"
+            android:src="@drawable/ic_okay"
+            android:background="@drawable/rounded_corner_blue"
+            android:layout_width="@dimen/image_btn_size"
+            android:layout_height="@dimen/image_btn_size"
+            android:layout_marginTop="@dimen/spacing_s"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/btnDecline"
+            app:layout_constraintTop_toBottomOf="@id/tvAddress" />
+
+        <TextView
+            android:id="@+id/tvDecline"
+            android:text="@string/decline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/spacing_5dp"
+            app:layout_constraintEnd_toStartOf="@+id/btnAccept"
+            app:layout_constraintHorizontal_chainStyle="spread"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/btnDecline"
+            />
+
+        <TextView
+            android:id="@+id/tvAccept"
+            android:text="@string/accept"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/spacing_5dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/btnDecline"
+            app:layout_constraintTop_toBottomOf="@id/btnDecline" />
+
+        <TextView
+            android:id="@+id/tvMatchStatus"
+            android:text="Match Accepted"
+            android:textSize="@dimen/text_size_m"
+            android:textStyle="bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/spacing_5dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvDecline"
+            android:visibility="gone"
+            />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>
